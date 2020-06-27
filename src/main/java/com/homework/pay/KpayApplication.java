@@ -1,13 +1,13 @@
-package com.test.pay;
+package com.homework.pay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PayApplication {
+public class KpayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PayApplication.class, args);
+		SpringApplication.run(KpayApplication.class, args);
 	}
 
 }
