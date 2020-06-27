@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('log')">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="starter-template.css" th:href="@{/starter-template.css}" rel="stylesheet">
+
+    <title>log</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('Kpay')">
+    <!-- <a class="navbar-brand" href="#">Spring Boot Tutorial</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">홈 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">log</a>
+            </li>
+        </ul>
+    </div> -->
+</nav>
+
+<div class="container">
+    <h2>log</h2>
+    <div>총 건수 : <span th:text="${#lists.size(kpays)}"></span></div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">kpay id</th>
+            <th scope="col">방 id</th>
+            <th scope="col">뿌린자</th>
+            <th scope="col">유저 id</th>
+            <th scope="col">이전 금액</th>
+            <th scope="col">받은 금액</th>
+            <th scope="col">남은 금액</th>
+            <th scope="col">생성 일자</th>
+            <th scope="col">token</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="kpay : ${kpays}">
+            <td th:text="${kpay.id}">Mark</td>
+            <td th:text="${kpay.originUserId}">Mark</td>
+            <td th:text="${kpay.roomId}">Mark</td>
+            <td th:text="${kpay.userId}">Mark</td>
+            <td th:text="${kpay.preMoney}">Mark</td>
+            <td th:text="${kpay.givenMoney}">Mark</td>
+            <td th:text="${kpay.curMoney}">Mark</td>
+            <td th:text="${kpay.createdDate}">Mark</td>
+            <td th:text="${kpay.token}">Mark</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
