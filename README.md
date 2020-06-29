@@ -48,7 +48,7 @@
 - thymeleaf
 
 2. DB 스키마
-- schema.sql에 기
+- schema.sql에 적어 놓았습니다.
 
 3. 화면
 - localhost:8080 <-- thymeleaf로 만든 api 로그를 볼수 있는 프론트 개발
